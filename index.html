@@ -1,18 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Scss-bem-starter</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>MovieS Catalog</title>
 </head>
+
 <body>
-    <!--HEAD-->
-    <header></header>
-    <!--MAIN-->
-    <main></main>
-    <!--FOOTER-->
-    <footer></footer>
-</body>
-</html>
+    <div class="container">
+        <h1 class="movie-heading mt-5 text-center pb-5">Movies Catalog</h1>
+        <div class="movie-wrapper d-flex pb-4">
+            <div class="movie-wrapper__left me-5">
+                <form class="movie-wrapper__left-form needs-validation" method="post" action="https://echo.htmlacademy.ru/" novalidate>
+                    <div class="form">
+                        <div class="form__firts-name mb-4">
+                            <input type="text" class="form-control" id="name" name="user_movie" aria-describedby="movie_find_help" minlength="3" required autocomplete="off">
+                            <div class="valid-feedback">
+                                Looks Good
+                            </div>
+                            <div class="invalid-feedback">
+                                Please write valid name
+                            </div>
+                        </div>
+                        <div class=" form__movie-name mb-4">
+                            <input type="text" class="form-control" id="name"
+                            aria-describedby="emailHelp" name="user_movie" required autocomplete="off">
+                            <div class="valid-feedback">
+                                Looks Good
+                            </div>
+                            <div class="invalid-feedback">
+                                Please write valid name
+                            </div>
+                        </div>
+                        
+                        <select class="form-select mb-4" aria-label="Default select example" name="movie_catalog">
+                            <option selected>All</option>
+                            <option value="horror">Horror</option>
+                            <option value="war">War</option>
+                            <option value="action">Action</option>
+                        </select>
+                        
+                        <select class="form-select mb-4" aria-label="Default select example">
+                            <option selected>Rating (high to low)</option>
+                            <option value="one">One</option>
+                            <option value="two">Two</option>
+                            <option value="three">Three</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary mb-2" type="button">Submit</button>
+                    </div>
+                </form>
+                <h2 class="movie-wrapper__left-heading">Bookmarked movies</h2>
+                <ol class="list-group">
+                    <li class="list-group-item align-items-start">
+                        <p class="list-group-item-text">Avangers:Infinity war</p>
+                        <button type="button" class="btn btn-danger">Remove</button>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="list-group-item-text">The Avangers</p>
+                        <button type="button" class="btn btn-danger">Remove</button>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="list-group-item-text">12 Years a Slave</p>
+                        <button type="button" class="btn btn-danger">Remove</button>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="movie-wrapper__right w-75 d-flex flex-column align-items-center">
+                <h3 class="movie-wrapper__right-heading align-self-start mb-2">Search result: 39</h3>
+                <div class="alert alert-info w-100 mb-2" role="alert">
+                    Use the form on the left to searchfor a movie
+                </div>
+                <div class="row cols">
+                    
+                    <div class="col">
+                        <div class="card mt-2">
+                            <img src="./images/maxresdefault.jpg">
+                            
+                            <div class="card-body">
+                                <h5 class="card-title">Avenger: Infinity War</h5>
+                                <div class=" d-flex align-items-center mt-3">
+                                    <img src="./images/1159880.png" alt="Calendar Icon" width="20" height="20">
+                                    <span class="card-body__year ms-2">2018</span>
+                                </div>
+                                
+                                <div class="card-body__star-wrapper d-flex align-items-center mt-3">
+                                    <img src="./images/star.jpg" alt="Star icon" width="25" height="25">
+                                    <p class="m-0 fs-6">8.7</p>
+                                </div>
+                                <div class="card-body__button-wrapper d-flex justify-content-between mt-3">
+                                    <button type="button" class="btn btn-outline-success">Watch Trailer</button>
+                                    <button type="button" class="btn btn-outline-danger">More Info</button>
+                                    <button type="button" class="btn btn-outline-warning">Bookmark</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card mt-2">
+                            <img src="./images/3733100-marvel's-avengers-review-promothumb.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Avenger: Infinity War</h5>
+                                <div class=" d-flex align-items-center mt-3">
+                                    <img src="./images/1159880.png" alt="Calendar Icon" width="20" height="20">
+                                    <span class="card-body__year ms-2">2012</span>
+                                </div>
+                                
+                                <div class="card-body__star-wrapper d-flex align-items-center mt-3">
+                                    <img src="./images/star.jpg" alt="Star icon" width="25" height="25">
+                                    <p class="m-0 fs-6">8.1</p>
+                                </div>
+                                <div class="card-body__button-wrapper d-flex justify-content-between mt-3">
+                                    <button type="button" class="btn btn-outline-success">Watch Trailer</button>
+                                    <button type="button" class="btn btn-outline-danger">More Info</button>
+                                    <button type="button" class="btn btn-outline-warning">Bookmark</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group w-25 mt-5" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary">1</button>
+                    <button type="button" class="btn btn-outline-secondary">2</button>
+                    <button type="button" class="btn btn-outline-secondary">3</button>
+                    <button type="button" class="btn btn-outline-secondary">4</button>
+                </div>
+                
+                
+            </div>
+            
+            
+            
+            
+            <script src="./js/validation.js"></script>
+        </body>
+        
+        </html>
